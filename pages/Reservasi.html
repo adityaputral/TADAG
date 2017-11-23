@@ -9,45 +9,83 @@
 	<title>MedCARE</title>
 </head>
 
-<body>
+<body class="animated fadeIn">
 	<!--Navigation-->
 	<div class="w3-bar w3-border-bottom w3-top w3-white">
 		<a href="index.html">
 			<img src="../image/medcare.png" id="logo">
 		</a>
 		<a href="#" class="w3-bar-item w3-button w3-right w3-mobile" onclick="document.getElementById('id01').style.display='block'">Masuk</a>
-		<a href="informasi user.html" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Informasi</a>
+		<a href="informasi user.html" class="w3-bar-item w3-button w3-right w3-mobile">Informasi</a>
 		<a href="jadwal.html" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
 		<a href="artikel.html" class="w3-bar-item w3-button w3-right w3-mobile">Artikel</a>
 		<a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile ">Beranda</a>
 	</div>
 
-	<h1 style="text-align:center">Reservasi</h1>
-	<hr>
-	<div class="w3-container w3-card">
-		<div>
-			<p>Jenis Pemeriksaan: </p>
+	<div class="w3-container" style="margin-top:3%">
+		<h1 style="text-align:center">Reservasi Online<sup class="tooltip"><span class="tooltiptext">Laman ini digunakan untuk mengambil antrian secara online</span><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size: 0.6em; "></i></sup></h1>
+		<hr>
+	</div>
+
+	<div class="w3-container w3-center">
+		<table class="w3-table w3-center">
+			<tr>
+				<td>
+					Jenis Pemeriksaan
+				</td>
+				<td>
+					:
+				</td>
+				<td>
+					<select class="w3-center w3-select">
+						<option value="" disabled selected>-Pilih Jenis Pemeriksaan-</option>
+						<option value="KonsulDU">Konsultasi dan Pemeriksaan oleh Dokter Umum</option>
+						<option value="KonsulPD">Konsultasi Dokter Spesialis Penyakit Dalam</option>
+						<option value="KonsulGigi">Konsultasi dengan Dokter Gigi</option>
+						<option value="KonsulJantung">Konsultasi Dokter Spesialis Jantung</option>
+						<option value="radiologi">Radiologi</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Dokter
+				</td>
+				<td>
+					:
+				</td>
+				<td>
+					<select class="w3-center w3-select">
+						<option value="" disabled selected>-Pilih Dokter-</option>
+						<option value="DrX">Dr. X</option>
+						<option value="DrY">Dr. Y</option>
+						<option value="DrXT">Dr. XT</option>
+						<option value="DrM">Dr. M</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Waktu
+				</td>
+				<td>
+					:
+				</td>
+				<td>
+					<input class="w3-input" type="date" name="bday" max="1979-12-31">
+				</td>
+			</tr>
+		</table>
+
+		<div class="w3-container">
+			<a href="" class="w3-button w3-blue" onclick="confirmation()">Submit</a>
+			<a href="../index.html" class="w3-button w3-blue">Back</a>
 		</div>
 
-		<div>
-			<p>Dokter: </p>
-		</div>
-
-		<div>
-			<p>Waktu: </p>
-		</div>
-		<div>
-			<center>
-				<div>
-					<button class="w3-button w3-left">submit</button>
-
-
-				</div>
-				<div>
-					<button class="w3-button w3-left">back</button>
-
-				</div>
-			</center>
+		<div id="antrianDanWaktu" class="w3-container" style="visibility:hidden">
+			<br>
+			Nomor Antrian anda : <h1 id="nomorAntrian" class="w3-xxlarge"></h1>
+			<h2>Datang 15 menit sebelum pukul 14.00</h2>
 		</div>
 	</div>
 
@@ -66,72 +104,54 @@
             <div class="w3-container">
                 <div id="masuk" class="w3-container city">
                     <div class="w3-container w3-padding">
-                        <form action="post">
                             Username :
                             <br>
                             <br>
-                            <input type="text" style="width:100%">
+                            <input class="w3-input" type="text" style="width:100%" required placeholder="Username">
                             <br>
                             <br> Password :
                             <br>
                             <br>
-                            <input type="password" style="width:100%">
+                            <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
                             <br>
                             <br>
-                            <button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
+                            <a href="informasi user.html"><button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button></a>
                             <br>
                             <br>
                             <a href="">Forgot Password?</a>
-                            <a href="" class="w3-button w3-blue" style="float:right;width:50%">Buat akun</a>
-                        </form>
                     </div>
                 </div>
 
                 <div id="daftar" class="w3-container city" style="display:none">
                     <form action="post">
                         Nama :
-                        <input type="text" style="width:100%" placeholder="Nama" required>
+                        <input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
                         <br>
                         <br> Tempat Tanggal Lahir :
                         <br>
-                        <input type="text" style="width:25%" placeholder="Tempat" required>
-                        <input type="number" min=1 max=31 placeholder="Tanggal" required>
-                        <select name="tgl" id="tgl" required>
-                            <option value="1">Januari</option>
-                            <option value="2">Februari</option>
-                            <option value="3">Maret</option>
-                            <option value="4">April</option>
-                            <option value="5">Mei</option>
-                            <option value="6">Juni</option>
-                            <option value="7">Juli</option>
-                            <option value="8">Agustus</option>
-                            <option value="9">September</option>
-                            <option value="10">Oktober</option>
-                            <option value="11">November</option>
-                            <option value="12">Desember</option>
-                        </select>
-                        <input type="number" min=1930 max=1999 placeholder="Tahun" required>
+                        <input class="w3-input"type="text" style="width:25%" placeholder="Tempat" required>
+                        <input class="w3-input" type="date" name="bday" max="1979-12-31">
                         <br>
                         <br> No. KTP:
                         <br>
-                        <input type="text" style="width:100%" required>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
                         <br>
                         <br> Alamat:
                         <br>
                         <!--ISI-->
                         <textarea rows="4" cols="88">
                                 
-                            </textarea> No. HP:
+                        </textarea> No. HP:
                         <br>
-                        <input type="text" style="width:100%" required>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
                         <br>
                         <br> Email:
                         <br>
-                        <input type="email" style="width:100%" required>
+                        <input class="w3-input" type="email" style="width:100%" required placeholder="Email">
                         <br>
                         <br> Password:
                         <br>
-                        <input type="password" style="width:100%" required>
+                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
                         <br>
                         <br>
                         <a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
@@ -140,6 +160,7 @@
             </div>
 
             <script>
+				var nomorAntrian=0;
                 function openCity(evt, cityName) {
                     var i, x, tablinks;
                     x = document.getElementsByClassName("city");
@@ -153,10 +174,23 @@
                     document.getElementById(cityName).style.display = "block";
                     evt.currentTarget.className += " w3-white";
                 }
+				function confirmation() {
+					var r = confirm("Apakah Anda sudah yakin?");
+					if(r == true){
+						nomorAntrian++;
+						document.getElementById("nomorAntrian").innerHTML=nomorAntrian;
+						document.getElementById("antrianDanWaktu").style.visibility = "visible";
+						
+					} else{
+						event.preventDefault();
+					}
+					event.preventDefault();
+				}
             </script>
 
         </div>
     </div>
+			
 </body>
 
 </html>

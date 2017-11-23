@@ -23,7 +23,7 @@
     </div>
 
 	<div class="w3-container" style="margin-top:3%">
-		<h1 style="text-align:center">Jadwal</h1>
+		<h1 style="text-align:center">Jadwal<sup class="tooltip"><span class="tooltiptext">Laman ini berisi tentang jadwal-jadwal dokter di rumah sakit ini</span><i class="fa fa-question-circle-o" aria-hidden="true" style="font-size: 0.6em; "></i></sup></h1>
 		<hr>
 	</div>
 	
@@ -34,18 +34,20 @@
 					<p class="w3-center">Pilih Dokter:</p>
 				</td>
 				<td>
-					<select class="w3-center" style="margin-top:8%;width:100%">
-						<option value="dr.x">Dr.X</option>
-						<option value="dr.y">Dr.Y</option>
-						<option value="dr.xr">Dr. XT</option>
-						<option value="dr.ss">Dr. M</option>
+					<select class="w3-center w3-select" style="margin-top:4%;width:100%">
+						<option value="" disabled selected>-Pilih Dokter-</option>
+						<option value="drx">Dr.X</option>
+						<option value="dry">Dr.Y</option>
+						<option value="drxr">Dr. XT</option>
+						<option value="drm">Dr. M</option>
 					</select>
 				</td>
 				<td>
 					<p class="w3-center">Pilih Spesialis:</p>
 				</td>
 				<td>
-					<select class="w3-center" style="margin-top:4%;width:100%">
+					<select class="w3-center w3-select" style="margin-top:4%;width:100%">
+						<option value="" disabled selected>-Pilih Spesialis-</option>
 						<option value="Sp.A">Spesialis Anak</option>
 						<option value="Sp.B">Spesialis Bedah</option>
 						<option value="Sp.U">Spesialis Urologi</option>
@@ -56,7 +58,7 @@
 		</table>
 	</div>
 	<div>
-		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/InfoUser.jpg" alt="profile">
+		<img style="width:100px;height:100px;float:left;" class="w3-margin"  src="../image/people.svg" alt="profile">
 		<h2 style=""> Dr.X</h2>
 		<table class="w3-table w3-striped w3-border">
 			<tr>
@@ -79,7 +81,7 @@
 	</div>
 	<br>
 	<div>
-		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/InfoUser.jpg" alt="profile">
+		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/people.svg" alt="profile">
 		<h2 style=""> Dr.Xt</h2>
 		<table>
 			<tr>
@@ -102,7 +104,7 @@
 	</div>
 	<br>
 	<div>
-		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/InfoUser.jpg" alt="profile">
+		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/people.svg" alt="profile">
 		<h2 style=""> Dr.M</h2>
 		<table>
 			<tr>
@@ -125,7 +127,7 @@
 	</div>
 	<br>
 	<div>
-		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/InfoUser.jpg" alt="profile">
+		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/people.svg" alt="profile">
 		<h2 style=""> Dr.Y</h2>
 		<table>
 			<tr>
@@ -148,7 +150,7 @@
 	</div>
 	<br>
 	<div>
-		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/InfoUser.jpg" alt="profile">
+		<img style="width:100px;height:100px;float:left;" class="w3-margin" src="../image/people.svg" alt="profile">
 		<h2 style=""> Dr.Z</h2>
 		<table>
 			<tr>
@@ -185,72 +187,54 @@
             <div class="w3-container">
                 <div id="masuk" class="w3-container city">
                     <div class="w3-container w3-padding">
-                        <form action="post">
                             Username :
                             <br>
                             <br>
-                            <input type="text" style="width:100%">
+                            <input class="w3-input" type="text" style="width:100%" required placeholder="Username">
                             <br>
                             <br> Password :
                             <br>
                             <br>
-                            <input type="password" style="width:100%">
+                            <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
                             <br>
                             <br>
-                            <button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
+                            <a href="informasi user.html"><button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button></a>
                             <br>
                             <br>
                             <a href="">Forgot Password?</a>
-                            <a href="" class="w3-button w3-blue" style="float:right;width:50%">Buat akun</a>
-                        </form>
                     </div>
                 </div>
 
                 <div id="daftar" class="w3-container city" style="display:none">
                     <form action="post">
                         Nama :
-                        <input type="text" style="width:100%" placeholder="Nama" required>
+                        <input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
                         <br>
                         <br> Tempat Tanggal Lahir :
                         <br>
-                        <input type="text" style="width:25%" placeholder="Tempat" required>
-                        <input type="number" min=1 max=31 placeholder="Tanggal" required>
-                        <select name="tgl" id="tgl" required>
-                            <option value="1">Januari</option>
-                            <option value="2">Februari</option>
-                            <option value="3">Maret</option>
-                            <option value="4">April</option>
-                            <option value="5">Mei</option>
-                            <option value="6">Juni</option>
-                            <option value="7">Juli</option>
-                            <option value="8">Agustus</option>
-                            <option value="9">September</option>
-                            <option value="10">Oktober</option>
-                            <option value="11">November</option>
-                            <option value="12">Desember</option>
-                        </select>
-                        <input type="number" min=1930 max=1999 placeholder="Tahun" required>
+                        <input class="w3-input"type="text" style="width:25%" placeholder="Tempat" required>
+                        <input class="w3-input" type="date" name="bday" max="1979-12-31">
                         <br>
                         <br> No. KTP:
                         <br>
-                        <input type="text" style="width:100%" required>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
                         <br>
                         <br> Alamat:
                         <br>
                         <!--ISI-->
                         <textarea rows="4" cols="88">
                                 
-                            </textarea> No. HP:
+                        </textarea> No. HP:
                         <br>
-                        <input type="text" style="width:100%" required>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
                         <br>
                         <br> Email:
                         <br>
-                        <input type="email" style="width:100%" required>
+                        <input class="w3-input" type="email" style="width:100%" required placeholder="Email">
                         <br>
                         <br> Password:
                         <br>
-                        <input type="password" style="width:100%" required>
+                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
                         <br>
                         <br>
                         <a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
