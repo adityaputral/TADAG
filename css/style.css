@@ -36,7 +36,6 @@ img.avatar {
 }
 
 hr{
-<<<<<<< HEAD
     border: 2px solid #2196F3;
 }
 
@@ -85,7 +84,5 @@ hr{
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-=======
     border: 3px solid #2196F3;
->>>>>>> 54f51da70bed4bfd88d8a8ceaf506ab1414e6856
 }
