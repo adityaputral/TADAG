@@ -14,12 +14,12 @@
         <a href="../index.html"><img src="../image/medcare.png" id="logo"></a>
         <a href="#" class="w3-bar-item w3-button w3-right w3-mobile" onclick="document.getElementById('id01').style.display='block'">Masuk</a>
         <a href="informasi user.html" class="w3-bar-item w3-button w3-right w3-mobile">Informasi</a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
+        <a href="jadwal.html" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
         <a href="#" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Artikel</a>
         <a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile">Beranda</a>
     </div>
     <!--CONTENT-->
-    <div class="w3-container" style="margin-top:4%">
+    <div class="w3-container" style="margin-top:3%">
         <h1 class="w3-xxlarge w3-center">Artikel</h1>
     </div>
     <hr>
@@ -153,6 +153,113 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-blue w3-bar">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event,'masuk')">
+                    <h2>Masuk</h2>
+                </button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'daftar')">
+                    <h2>Daftar</h2>
+                </button>
+            </header>
+            <div class="w3-container">
+                <div id="masuk" class="w3-container city">
+                    <div class="w3-container w3-padding">
+                        <form action="post">
+                            Username :
+                            <br>
+                            <br>
+                            <input type="text" style="width:100%">
+                            <br>
+                            <br> Password :
+                            <br>
+                            <br>
+                            <input type="password" style="width:100%">
+                            <br>
+                            <br>
+                            <button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
+                            <br>
+                            <br>
+                            <a href="">Forgot Password?</a>
+                            <a href="" class="w3-button w3-blue" style="float:right;width:50%">Buat akun</a>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="daftar" class="w3-container city" style="display:none">
+                    <form action="post">
+                        Nama :
+                        <input type="text" style="width:100%" placeholder="Nama" required>
+                        <br>
+                        <br> Tempat Tanggal Lahir :
+                        <br>
+                        <input type="text" style="width:25%" placeholder="Tempat" required>
+                        <input type="number" min=1 max=31 placeholder="Tanggal" required>
+                        <select name="tgl" id="tgl" required>
+                            <option value="1">Januari</option>
+                            <option value="2">Februari</option>
+                            <option value="3">Maret</option>
+                            <option value="4">April</option>
+                            <option value="5">Mei</option>
+                            <option value="6">Juni</option>
+                            <option value="7">Juli</option>
+                            <option value="8">Agustus</option>
+                            <option value="9">September</option>
+                            <option value="10">Oktober</option>
+                            <option value="11">November</option>
+                            <option value="12">Desember</option>
+                        </select>
+                        <input type="number" min=1930 max=1999 placeholder="Tahun" required>
+                        <br>
+                        <br> No. KTP:
+                        <br>
+                        <input type="text" style="width:100%" required>
+                        <br>
+                        <br> Alamat:
+                        <br>
+                        <!--ISI-->
+                        <textarea rows="4" cols="88">
+                                
+                            </textarea> No. HP:
+                        <br>
+                        <input type="text" style="width:100%" required>
+                        <br>
+                        <br> Email:
+                        <br>
+                        <input type="email" style="width:100%" required>
+                        <br>
+                        <br> Password:
+                        <br>
+                        <input type="password" style="width:100%" required>
+                        <br>
+                        <br>
+                        <a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-white", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " w3-white";
+                }
+            </script>
+
         </div>
     </div>
 </body>
