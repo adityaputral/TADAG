@@ -10,14 +10,29 @@
 </head>
 
 <body>
-	<h1 style="text-align:center;">Informasi User</h1>
-	<hr>
+
+	<!--Navigation-->
+	<div class="w3-bar w3-border-bottom w3-top w3-white">
+		<a href="index.html">
+			<img src="../image/medcare.png" id="logo">
+		</a>
+		<a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile" onclick="document.getElementById('id01').style.display='block'">Masuk</a>
+		<a href="#" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Informasi</a>
+		<a href="#" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
+		<a href="artikel.html" class="w3-bar-item w3-button w3-right w3-mobile">Artikel</a>
+		<a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile ">Beranda</a>
+	</div>
 	<!-- jangan lupa di float left-->
-	<div class="w3-container">
-		<div class="w3-card w3-margin">
-			<img class="w3-margin" src="../image/InfoUser.jpg" alt="profile" style="float:left; width:150px;height:150px">
+	<div class="w3-container" style="margin-top:3%">
+		<h1 style="text-align:center;">Informasi User</h1>
+		<hr>
+	</div>
+	<!--Header-->
+	<div class="parallax w3-center" style="background-image: url('../image/akun.jpg');">
+		<div class="w3-container w3-center">
+			<img class="w3-center" src="../image/InfoUser.jpg" alt="profile" style="float:left; width:150px;height:150px">
 			<div>
-				<p style="float:left"> Nama : aditya putra laksono
+				<p> Nama : aditya putra laksono
 					<br> Tempat, Tanggal Lahir: Bandung, 1 Desember 1997
 					<br> NO KTP: 01200129997
 					<br> Alamat: jl. ciumbuleuit no 101
@@ -26,7 +41,6 @@
 					<br> Password: **********
 				</p>
 			</div>
-
 		</div>
 	</div>
 
@@ -72,6 +86,8 @@
 				</tr>
 			</table>
 		</div>
+	</div>
+
 	</div>
 
 </body>
