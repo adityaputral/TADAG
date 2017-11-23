@@ -19,13 +19,7 @@ img.avatar {
     margin-top:5px;
 }
 
-.table, .tr, .td {
-    border: 1px solid black;
- }
- .table{
-    width:85%;
-    height: 70px;
- }
+
 .parallax {
     margin:0px;
     /* The image used */
@@ -42,5 +36,5 @@ img.avatar {
 }
 
 hr{
-    border: 2px solid #2196F3;
+    border: 3px solid #2196F3;
 }
