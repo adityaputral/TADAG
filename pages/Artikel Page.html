@@ -15,13 +15,14 @@
             <img src="../image/medcare.png" id="logo">
         </a>
         <a href="#" class="w3-bar-item w3-button w3-right w3-mobile" onclick="document.getElementById('id01').style.display='block'">Masuk</a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-mobile">Informasi</a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
-        <a href="pages/artikel.html" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Artikel</a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-mobile">Beranda</a>
+        <a href="informasi user.html" class="w3-bar-item w3-button w3-right w3-mobile">Informasi</a>
+        <a href="jadwal.html" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
+        <a href="artikel.html" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Artikel</a>
+        <a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile">Beranda</a>
     </div>
-    <div style="margin-top:3%"class="w3-container w3-blue w3-padding">
-        <a style="text-decoration: none"href="artikel.html">Artikel ></a>
+    <div style="margin-top:3%" class="w3-container w3-blue w3-padding">
+        <a style="text-decoration: none" href="../index.html">Beranda ></a>
+        <a style="text-decoration: none" href="artikel.html">Artikel ></a>
         <a href="Artikel Page.html"><b>Artikel Page</b></a>
     </div>
     <center>
@@ -29,9 +30,9 @@
             <img style="width:100% ;height:100%" class="" src="../image/batox1.jpg" alt="profile">
             <h3 style="">BOTOX</h3>
             <p style=""> Post by Admin February 24, 2017
-                <br> Tanda – tanda penuaan salah satunya adalah ditemukannya keriput-keriput di wajah. Banyak keriput yang terbetuk
-                akibat kontraksi otot berlebihan di wajah (keriput dinamik). Dengan bertambah usia keriput dinamik dapat
-                berubah menjadi keriput menetap, yaitu keriput yang terlihat saat wajah beristirahat. Proses ini terjadi
+                <br> Tanda – tanda penuaan salah satunya adalah ditemukannya keriput-keriput di wajah. Banyak keriput yang
+                terbetuk akibat kontraksi otot berlebihan di wajah (keriput dinamik). Dengan bertambah usia keriput dinamik
+                dapat berubah menjadi keriput menetap, yaitu keriput yang terlihat saat wajah beristirahat. Proses ini terjadi
                 karena penurunan kolagen, elastin dan asam hyaluronik. Salah satu terapi untuk mengurangi keriput dapat menggunakan
                 injeksi botox. Botox adalah protein alami yang dipurifikasi dan dapat membuat relaksasi otot yang menyebabkan
                 keriput sehingga tampak lebih muda. Botox diderivasi dari bakteri dengan cara yang hampir sama dengan penisilin
@@ -59,22 +60,104 @@
             <p>www.medcare.com</p>
         </div>
         <div class="w3-cell">
-            <a href="">Beranda</a>
-            <br>
-            <a href="">Masuk</a>
-            <br>
-            <a href="">Informasi</a>
-            <br>
-            <a href="">Jadwal</a>
-        </div>
-        <div class="w3-cell">
-            <a href="">Beranda</a>
-            <br>
-            <a href="">Masuk</a>
-            <br>
-            <a href="">Informasi</a>
-            <br>
-            <a href="">Jadwal</a>
+			<a href="../index.html">Beranda</a>
+			<br>
+			<a href="artikel.html">Artikel</a>
+			<br>
+			<a href="informasi user.html">Informasi</a>
+			<br>
+			<a href="jadwal.html">Jadwal</a>
+			<br>
+			<a href="Reservasi.html">Reservasi Online</a>
+		</div>
+    </div>
+
+    <!--Modal-->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-blue w3-bar">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event,'masuk')">
+                    <h2>Masuk</h2>
+                </button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'daftar')">
+                    <h2>Daftar</h2>
+                </button>
+            </header>
+            <div class="w3-container">
+                <div id="masuk" class="w3-container city">
+                    <div class="w3-container w3-padding">
+                        Username :
+                        <br>
+                        <br>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="Username">
+                        <br>
+                        <br> Password :
+                        <br>
+                        <br>
+                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+                        <br>
+                        <br>
+                        <a href="pages/informasi user.html"><button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button></a>
+                        <br>
+                        <br>
+                        <a href="">Forgot Password?</a>
+                    </div>
+                </div>
+
+                <div id="daftar" class="w3-container city" style="display:none">
+                    <form action="post">
+                        Nama :
+                        <input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
+                        <br>
+                        <br> Tempat Tanggal Lahir :
+                        <br>
+                        <input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
+                        <input class="w3-input" type="date" name="bday" max="1979-12-31">
+                        <br>
+                        <br> No. KTP:
+                        <br>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
+                        <br>
+                        <br> Alamat:
+                        <br>
+                        <!--ISI-->
+                        <textarea rows="4" cols="88">
+                                
+                        </textarea> No. HP:
+                        <br>
+                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
+                        <br>
+                        <br> Email:
+                        <br>
+                        <input class="w3-input" type="email" style="width:100%" required placeholder="Email">
+                        <br>
+                        <br> Password:
+                        <br>
+                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+                        <br>
+                        <br>
+                        <a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-white", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " w3-white";
+                }
+            </script>
+
         </div>
     </div>
 </body>
