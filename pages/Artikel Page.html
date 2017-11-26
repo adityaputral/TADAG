@@ -75,72 +75,77 @@
     <!--Modal-->
     <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-animate-top w3-card-4">
-            <header class="w3-container w3-blue w3-bar">
-                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event,'masuk')">
-                    <h2>Masuk</h2>
-                </button>
-                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'daftar')">
-                    <h2>Daftar</h2>
-                </button>
-            </header>
-            <div class="w3-container">
-                <div id="masuk" class="w3-container city">
-                    <div class="w3-container w3-padding">
-                        Username :
-                        <br>
-                        <br>
-                        <input class="w3-input" type="text" style="width:100%" required placeholder="Username">
-                        <br>
-                        <br> Password :
-                        <br>
-                        <br>
-                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
-                        <br>
-                        <br>
-                        <a href="pages/informasi user.html"><button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button></a>
-                        <br>
-                        <br>
-                        <a href="">Forgot Password?</a>
-                    </div>
-                </div>
+			<header class="w3-container w3-blue w3-bar">
+				<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				<button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event,'masuk')">
+					<h2>Masuk</h2>
+				</button>
+				<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'daftar')">
+					<h2>Daftar</h2>
+				</button>
+			</header>
+			<div class="w3-container">
+				<form action="informasi user.html">
+					<div id="masuk" class="w3-container city">
+						<div class="w3-container w3-padding">
+							Email :
+							<br>
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="Email">
+							<br>
+							<br> Password :
+							<br>
+							<br>
+							<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+							<br>
+							<br>
+							<button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
+							<br>
+							<br>
+							<a href="LupaPassword.html">Forgot Password?</a>
+						</div>
+					</div>
+				</form>
 
-                <div id="daftar" class="w3-container city" style="display:none">
-                    <form action="post">
-                        Nama :
-                        <input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
-                        <br>
-                        <br> Tempat Tanggal Lahir :
-                        <br>
-                        <input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
-                        <input class="w3-input" type="date" name="bday" max="1979-12-31">
-                        <br>
-                        <br> No. KTP:
-                        <br>
-                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
-                        <br>
-                        <br> Alamat:
-                        <br>
-                        <!--ISI-->
-                        <textarea rows="4" cols="88">
+				<form action="konfirmasi registrasi.html">
+					<div id="daftar" class="w3-container city" style="display:none">
+						<form action="post">
+							Nama :
+							<input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
+							<br>
+							<br> Tempat Tanggal Lahir :
+							<br>
+							<input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
+							<input class="w3-input" type="date" name="bday" max="1979-12-31" required>
+							<br>
+							<br> No. KTP:
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
+							<br>
+							<br> Alamat:
+							<br>
+							<!--ISI-->
+							<textarea rows="4" cols="88">
                                 
                         </textarea> No. HP:
-                        <br>
-                        <input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
-                        <br>
-                        <br> Email:
-                        <br>
-                        <input class="w3-input" type="email" style="width:100%" required placeholder="Email">
-                        <br>
-                        <br> Password:
-                        <br>
-                        <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
-                        <br>
-                        <br>
-                        <a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
-                    </form>
-                </div>
-            </div>
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
+							<br>
+							<br> Email:
+							<br>
+							<input class="w3-input" type="email" style="width:100%" required placeholder="Email">
+							<br>
+							<br> Password:
+							<br>
+							<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+							<br>
+							<br>
+							<button class="w3-button w3-blue" style="width:50%">Buat akun</button>
+						</form>
+					</div>
+				</form>
+
+			</div>
 
             <script>
                 function openCity(evt, cityName) {

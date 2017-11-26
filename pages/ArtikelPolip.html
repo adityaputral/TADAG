@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <title>MedCARE</title>
+</head>
+
+<body class="animated fadeIn">
+    <div class="w3-bar w3-border-bottom w3-top w3-white">
+        <a href="../index.html">
+            <img src="../image/medcare.png" id="logo">
+        </a>
+        <a href="#" class="w3-bar-item w3-button w3-right w3-mobile" onclick="document.getElementById('id01').style.display='block'">Masuk</a>
+        <a href="informasi user.html" class="w3-bar-item w3-button w3-right w3-mobile">Informasi</a>
+        <a href="jadwal.html" class="w3-bar-item w3-button w3-right w3-mobile">Jadwal</a>
+        <a href="artikel.html" class="w3-bar-item w3-button w3-right w3-mobile w3-topbar w3-border-blue">Artikel</a>
+        <a href="../index.html" class="w3-bar-item w3-button w3-right w3-mobile">Beranda</a>
+    </div>
+    <div style="margin-top:3%" class="w3-container w3-blue w3-padding">
+        <a style="text-decoration: none" href="../index.html">Beranda ></a>
+        <a style="text-decoration: none" href="artikel.html">Artikel ></a>
+        <a href="Artikel Page.html"><b>Artikel Page</b></a>
+    </div>
+    <center>
+        <div class="w3-card-4 " style="width:80%;height:100%">
+            <img style="width:100% ;height:100%" class="" src="../image/polip.jpg" alt="profile">
+            <h3 style="">Polip</h3>
+            <p style=""> Post by Admin 23 November 2017
+                <br> Polip biasanya tumbuh di daerah dimana selaput lendir membengkak akibat penimbunan cairan, seperti daerah
+                di sekitar lubang sinus pada rongga hidung. Ketika baru terbentuk, sebuah polip tampak seperti air mata dan
+                jika telah matang, bentuknya menyerupai buah anggur yang berwarna keabu-abuan. Polip menyebabkan penyumbatan
+                hidung, karena itu penderita seringkali mengeluhkan adanya penurunan fungsi indera penciuman. Karena indera
+                perasa berhubungan dengan indera penciuman, maka penderita juga bisa mengalami penurunan fungsi indera perasa
+                dan penciuman. Polip hidung juga bisa menyebabkan penyumbatan pada drainase lendir dari sinus ke hidung.
+                Penyumbatan ini menyebabkan tertimbunnya lendir di dalam sinus. Lendir yang terlalu lama berada di dalam
+                sinus bisa mengalami infeksi dan akhirnya terjadi sinusitis.
+
+            </p>
+        </div>
+    </center>
+    <!--Footer-->
+    <div class="w3-container w3-dark-grey w3-cell-row">
+        <div>
+            <p>
+                <i class="fa fa-map-marker"></i> Jl.Ciumbuleiut no.94</p>
+            <p>
+                <i class="fa fa-phone"></i> (022)1002001</p>
+            <p>
+                <i class="fa fa-envelope"></i> administrator@MedCare.com</p>
+        </div>
+        <div class="w3-cell">
+            <p>MedCARE</p>
+            <p>&copy; MedCare 2017</p>
+            <p>All Rights Reserved</p>
+            <p>www.medcare.com</p>
+        </div>
+        <div class="w3-cell">
+            <a href="../index.html">Beranda</a>
+            <br>
+            <a href="artikel.html">Artikel</a>
+            <br>
+            <a href="informasi user.html">Informasi</a>
+            <br>
+            <a href="jadwal.html">Jadwal</a>
+            <br>
+            <a href="Reservasi.html">Reservasi Online</a>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-blue w3-bar">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event,'masuk')">
+					<h2>Masuk</h2>
+				</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'daftar')">
+					<h2>Daftar</h2>
+				</button>
+            </header>
+            <div class="w3-container">
+                <form action="informasi user.html">
+                    <div id="masuk" class="w3-container city">
+                        <div class="w3-container w3-padding">
+                            Email :
+							<br>
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="Email">
+                            <br>
+                            <br> Password :
+                            <br>
+                            <br>
+                            <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+                            <br>
+                            <br>
+                            <button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
+                            <br>
+                            <br>
+                            <a href="LupaPassword.html">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="konfirmasi registrasi.html">
+                    <div id="daftar" class="w3-container city" style="display:none">
+                        <form action="post">
+                            Nama :
+                            <input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
+                            <br>
+                            <br> Tempat Tanggal Lahir :
+                            <br>
+                            <input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
+                            <input class="w3-input" type="date" name="bday" max="1979-12-31" required>
+                            <br>
+                            <br> No. KTP:
+                            <br>
+                            <input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
+                            <br>
+                            <br> Alamat:
+                            <br>
+                            <!--ISI-->
+                            <textarea rows="4" cols="88">
+                                
+                        </textarea> No. HP:
+                            <br>
+                            <input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
+                            <br>
+                            <br> Email:
+                            <br>
+                            <input class="w3-input" type="email" style="width:100%" required placeholder="Email">
+                            <br>
+                            <br> Password:
+                            <br>
+                            <input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+                            <br>
+                            <br>
+                            <button class="w3-button w3-blue" style="width:50%">Buat akun</button>
+                        </form>
+                    </div>
+                </form>
+
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-white", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " w3-white";
+                }
+            </script>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -34,16 +34,28 @@
 	</div>
 
 	<div class="w3-container w3-center">
-		<table class="w3-table w3-center">
-			<tr>
-				<td>
-					Jenis Pemeriksaan
-				</td>
-				<td>
-					:
-				</td>
-				<td>
-					<select class="w3-center w3-select">
+		<form action="">
+			<table class="w3-table w3-center">
+				<tr>
+					<td>
+						Waktu
+					</td>
+					<td>
+						:
+					</td>
+					<td>
+						<input class="w3-input" type="date" name="bday" min="2017-11-27" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Jenis Pemeriksaan
+					</td>
+					<td>
+						:
+					</td>
+					<td>
+						<select class="w3-center w3-select" required>
 						<option value="" disabled selected>-Pilih Jenis Pemeriksaan-</option>
 						<option value="KonsulDU">Konsultasi dan Pemeriksaan oleh Dokter Umum</option>
 						<option value="KonsulPD">Konsultasi Dokter Spesialis Penyakit Dalam</option>
@@ -51,42 +63,30 @@
 						<option value="KonsulJantung">Konsultasi Dokter Spesialis Jantung</option>
 						<option value="radiologi">Radiologi</option>
 					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Dokter
-				</td>
-				<td>
-					:
-				</td>
-				<td>
-					<select class="w3-center w3-select">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Dokter
+					</td>
+					<td>
+						:
+					</td>
+					<td>
+						<select class="w3-center w3-select" required>
 						<option value="" disabled selected>-Pilih Dokter-</option>
 						<option value="DrX">Dr. X</option>
 						<option value="DrY">Dr. Y</option>
 						<option value="DrXT">Dr. XT</option>
 						<option value="DrM">Dr. M</option>
 					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Waktu
-				</td>
-				<td>
-					:
-				</td>
-				<td>
-					<input class="w3-input" type="date" name="bday" max="1979-12-31">
-				</td>
-			</tr>
-		</table>
-
-		<div class="w3-container">
-			<a href="" class="w3-button w3-blue" onclick="confirmation()">Submit</a>
+					</td>
+				</tr>
+				
+			</table>
+			<button type="submit" class="w3-button w3-blue" onclick="confirmation()">Submit</button>
 			<a href="../index.html" class="w3-button w3-blue">Back</a>
-		</div>
+		</form>
 
 		<div id="antrianDanWaktu" class="w3-container" style="visibility:hidden">
 			<br> Nomor Antrian anda :
@@ -135,63 +135,66 @@
 				</button>
 			</header>
 			<div class="w3-container">
-				<div id="masuk" class="w3-container city">
-					<div class="w3-container w3-padding">
-						Username :
-						<br>
-						<br>
-						<input class="w3-input" type="text" style="width:100%" required placeholder="Username">
-						<br>
-						<br> Password :
-						<br>
-						<br>
-						<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
-						<br>
-						<br>
-						<a href="informasi user.html">
+				<form action="informasi user.html">
+					<div id="masuk" class="w3-container city">
+						<div class="w3-container w3-padding">
+							Email :
+							<br>
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="Email">
+							<br>
+							<br> Password :
+							<br>
+							<br>
+							<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+							<br>
+							<br>
 							<button class="w3-button w3-blue" type="submit" style="width:100%">Masuk</button>
-						</a>
-						<br>
-						<br>
-						<a href="">Forgot Password?</a>
+							<br>
+							<br>
+							<a href="LupaPassword.html">Forgot Password?</a>
+						</div>
 					</div>
-				</div>
+				</form>
 
-				<div id="daftar" class="w3-container city" style="display:none">
-					<form action="post">
-						Nama :
-						<input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
-						<br>
-						<br> Tempat Tanggal Lahir :
-						<br>
-						<input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
-						<input class="w3-input" type="date" name="bday" max="1979-12-31">
-						<br>
-						<br> No. KTP:
-						<br>
-						<input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
-						<br>
-						<br> Alamat:
-						<br>
-						<!--ISI-->
-						<textarea rows="4" cols="88">
+				<form action="konfirmasi registrasi.html">
+					<div id="daftar" class="w3-container city" style="display:none">
+						<form action="post">
+							Nama :
+							<input class="w3-input" type="text" style="width:100%" placeholder="Nama" required>
+							<br>
+							<br> Tempat Tanggal Lahir :
+							<br>
+							<input class="w3-input" type="text" style="width:25%" placeholder="Tempat" required>
+							<input class="w3-input" type="date" name="bday" max="1979-12-31" required>
+							<br>
+							<br> No. KTP:
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="No. KTP">
+							<br>
+							<br> Alamat:
+							<br>
+							<!--ISI-->
+							<textarea rows="4" cols="88">
                                 
                         </textarea> No. HP:
-						<br>
-						<input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
-						<br>
-						<br> Email:
-						<br>
-						<input class="w3-input" type="email" style="width:100%" required placeholder="Email">
-						<br>
-						<br> Password:
-						<br>
-						<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
-						<br>
-						<br>
-						<a href="" class="w3-button w3-blue" style="width:50%">Buat akun</a>
-					</form>
-				</div>
+							<br>
+							<input class="w3-input" type="text" style="width:100%" required placeholder="No. HP">
+							<br>
+							<br> Email:
+							<br>
+							<input class="w3-input" type="email" style="width:100%" required placeholder="Email">
+							<br>
+							<br> Password:
+							<br>
+							<input class="w3-input" type="password" style="width:100%" required placeholder="Password">
+							<br>
+							<br>
+							<button class="w3-button w3-blue" style="width:50%">Buat akun</button>
+						</form>
+					</div>
+				</form>
+
 			</div>
 
 			<script>
